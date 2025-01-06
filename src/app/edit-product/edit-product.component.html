@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="container text-center" style="margin: 30px;">
+    <h3>Editar Producto</h3>
+  </div>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="description" class="form-label">Descripción del Producto</label>
+      <input type="text" class="form-control" 
+      id="description" name="description" required="true"
+      [(ngModel)]="product.description">
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Precio</label>
+      <input type="number" step="any" class="form-control"
+      id="price" name="price" [(ngModel)]="product.price">
+    </div>
+    <div class="mb-3">
+      <label for="quantity" class="form-label">Existencias</label>
+      <input type="number" class="form-control" 
+      id="quantity" name="quantity" [(ngModel)]="product.quantity">
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-warning btn-sm me-3">Guardar</button>
+      <a href="/" class="btn btn-danger btn-sm">Regresar</a>
+    </div>
+  </form>
+
+</div>
